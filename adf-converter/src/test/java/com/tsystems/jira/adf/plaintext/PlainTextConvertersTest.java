@@ -1,0 +1,157 @@
+package com.tsystems.jira.adf.plaintext;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
+import java.util.List;
+
+import org.junit.jupiter.api.Test;
+
+import com.tsystems.jira.adf.api.ConverterContext;
+import com.tsystems.jira.adf.config.ConverterConfig;
+import com.tsystems.jira.adf.model.Blockquote;
+import com.tsystems.jira.adf.model.BulletList;
+import com.tsystems.jira.adf.model.CodeBlock;
+import com.tsystems.jira.adf.model.Document;
+import com.tsystems.jira.adf.model.Heading;
+import com.tsystems.jira.adf.model.ListItem;
+import com.tsystems.jira.adf.model.Media;
+import com.tsystems.jira.adf.model.MediaSingle;
+import com.tsystems.jira.adf.model.Paragraph;
+import com.tsystems.jira.adf.model.Table;
+import com.tsystems.jira.adf.model.TableCell;
+import com.tsystems.jira.adf.model.TableHeader;
+import com.tsystems.jira.adf.model.TableRow;
+import com.tsystems.jira.adf.model.TaskItem;
+import com.tsystems.jira.adf.model.TaskList;
+import com.tsystems.jira.adf.model.Text;
+import com.tsystems.jira.adf.util.JsonUtil;
+
+class PlainTextConvertersTest {
+
+    private final ConverterConfig config = ConverterConfig.builder().build();
+    private final ConverterContext ctx = ConverterContext.builder().build();
+
+    @Test
+    void outbound_paragraph_and_hard_break() {
+        Document doc = new Document(List.of(new Paragraph(List.of(
+                new Text("Hello"), 
+                new com.tsystems.jira.adf.model.HardBreak(),
+                new Text("World")
+        ))));
+
+        String txt = PlainTextConverters.outbound(config).convert(doc, ctx);
+
+        assertThat(txt).isEqualTo("Hello\nWorld");
+    }
+
+    @Test
+    void outbound_heading_lists_task_code_table_media() {
+        Document doc = new Document(List.of(
+                new Heading(2, List.of(new Text("Title"))),
+                new BulletList(List.of(new ListItem(List.of(new Paragraph(List.of(new Text("item1")))))),
+                new com.tsystems.jira.adf.model.OrderedList(List.of(new ListItem(List.of(new Paragraph(List.of(new Text("first")))))),
+                new TaskList(List.of(new TaskItem("1", "DONE", List.of(new Paragraph(List.of(new Text("task")))))),
+                new CodeBlock("java", "System.out.println(\"hi\");"),
+                new Table(List.of(
+                        new TableRow(List.of(
+                                new TableHeader(List.of(new Text("H1")), null),
+                                new TableHeader(List.of(new Text("H2")), null)
+                        )),
+                        new TableRow(List.of(
+                                new TableCell(List.of(new Text("c1")), null),
+                                new TableCell(List.of(new Text("c2")), null)
+                        ))
+                )),
+                new MediaSingle(List.of(new Media("file123", "file", null, null, null)))
+        ));
+
+        String txt = PlainTextConverters.outbound(config).convert(doc, ctx);
+
+        assertThat(txt).contains("## Title");
+        assertThat(txt).contains("- item1");
+        assertThat(txt).contains("1. first");
+        assertThat(txt).contains("- [x] task");
+        assertThat(txt).contains("```java\nSystem.out.println(\"hi\");\n```");
+        assertThat(txt).contains("H1 | H2");
+        assertThat(txt).contains("[media:file123]");
+    }
+
+    @Test
+    void outbound_blockquote_panel_status() {
+        Document doc = new Document(List.of(
+                new Blockquote(List.of(new Paragraph(List.of(new Text("quote"))))),
+                new com.tsystems.jira.adf.model.Panel("info", List.of(new Paragraph(List.of(new Text("panel"))))),
+                new com.tsystems.jira.adf.model.Status("status text", "blue", null)
+        ));
+
+        String txt = PlainTextConverters.outbound(config).convert(doc, ctx);
+
+        assertThat(txt).contains("> quote");
+        assertThat(txt).contains("[PANEL info] panel");
+        assertThat(txt).contains("[STATUS blue] status text");
+    }
+
+    @Test
+    void inbound_paragraphs_and_breaks() {
+        String input = "Line1\nLine2\n\nSecond para";
+
+        Document doc = PlainTextConverters.inbound(config).convert(input, ctx);
+        String json = JsonUtil.toJson(doc);
+
+        assertThat(json).contains("\"paragraph\"");
+        assertThat(json).contains("\"hardBreak\"");
+    }
+
+    @Test
+    void inbound_lists_and_tasks() {
+        String input = "- item1\n- item2\n\n1. first\n2. second\n\n- [x] done\n- [ ] todo";
+
+        Document doc = PlainTextConverters.inbound(config).convert(input, ctx);
+        String json = JsonUtil.toJson(doc);
+
+        assertThat(json).contains("bulletList");
+        assertThat(json).contains("orderedList");
+        assertThat(json).contains("taskList");
+    }
+
+    @Test
+    void inbound_code_fence() {
+        String input = "```java\ncode line\n```";
+
+        Document doc = PlainTextConverters.inbound(config).convert(input, ctx);
+        String json = JsonUtil.toJson(doc);
+
+        assertThat(json).contains("codeBlock");
+        assertThat(json).contains("java");
+    }
+
+    @Test
+    void round_trip_paragraph_and_list() {
+        Document doc = new Document(List.of(
+                new Paragraph(List.of(new Text("Hello"))),
+                new BulletList(List.of(new ListItem(List.of(new Paragraph(List.of(new Text("item"))))))
+        ));
+
+        String txt = PlainTextConverters.outbound(config).convert(doc, ctx);
+        Document back = PlainTextConverters.inbound(config).convert(txt, ctx);
+
+        String json = JsonUtil.toJson(back);
+        assertThat(json).contains("paragraph");
+        assertThat(json).contains("bulletList");
+    }
+
+    @Test
+    void round_trip_plaintext_to_md_and_html_with_table_and_media() {
+        String input = "Hello\n\n- item\n\n| H1 |\n| c1 |\n\n[media:abc]";
+
+        Document adf = PlainTextConverters.inbound(config).convert(input, ctx);
+        String md = com.tsystems.jira.adf.markdown.MarkdownConverters.outbound(config).convert(adf, ctx);
+        String html = com.tsystems.jira.adf.html.HtmlConverters.outbound(config).convert(adf, ctx);
+
+        assertThat(md).contains("Hello");
+        assertThat(md).contains("| H1 |");
+        assertThat(md).contains("media:abc");
+        assertThat(html).contains("media:abc");
+        assertThat(html).contains("table");
+    }
+}

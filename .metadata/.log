@@ -1,0 +1,1160 @@
+!SESSION 2026-07-15 16:19:10.640 -----------------------------------------------
+eclipse.buildId=4.40.0.202606090740
+java.version=25.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.springframework.boot.ide.branding.springtools
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.springframework.boot.ide.branding.springtools
+
+!ENTRY ch.qos.logback.classic 1 0 2026-07-15 16:19:14.373
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2026-07-15 16:22:54.656
+!MESSAGE Logback config file: /home/paulorfernandes/Development/java/projects/atlassian/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.7.101.20251017-1242.xml
+
+!ENTRY org.eclipse.ui 2 0 2026-07-15 16:22:54.791
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2026-07-15 16:22:54.791
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.ui 2 0 2026-07-15 16:22:54.925
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2026-07-15 16:22:54.925
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 16:29:16.984
+!MESSAGE Plugin is modifying compileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 16:29:16.985
+!MESSAGE Plugin is modifying compileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 16:29:16.985
+!MESSAGE Plugin is modifying testCompileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 16:29:16.985
+!MESSAGE Plugin is modifying testCompileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 16:29:17.500
+!MESSAGE Plugin is modifying compileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 16:29:17.500
+!MESSAGE Plugin is modifying compileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 16:29:17.500
+!MESSAGE Plugin is modifying testCompileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 16:29:17.500
+!MESSAGE Plugin is modifying testCompileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:09.425
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:15.567
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:15.567
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:15.567
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:15.568
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:15.568
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:15.568
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:15.568
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:15.569
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:15.569
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:15.569
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:15.569
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:15.570
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:15.570
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:15.570
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:15.571
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:15.571
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:15.571
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:32.052
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:32.052
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:32.076
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:32.076
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:32.079
+!MESSAGE Plugin is modifying compileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:32.079
+!MESSAGE Plugin is modifying compileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:32.079
+!MESSAGE Plugin is modifying testCompileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:32.079
+!MESSAGE Plugin is modifying testCompileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:32.270
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:32.271
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:32.272
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:32.272
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:32.272
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:32.272
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:32.273
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:32.273
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:32.273
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:32.274
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:32.274
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:32.274
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:32.274
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:32.275
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:32.275
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:32.275
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:32.275
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:32.275
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:32.372
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:32.373
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:32.452
+!MESSAGE Plugin is modifying compileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:32.452
+!MESSAGE Plugin is modifying compileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:32.452
+!MESSAGE Plugin is modifying testCompileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:32.452
+!MESSAGE Plugin is modifying testCompileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:33.282
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:33.283
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:33.293
+!MESSAGE Plugin is modifying compileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:33.293
+!MESSAGE Plugin is modifying compileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:33.294
+!MESSAGE Plugin is modifying testCompileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:33.294
+!MESSAGE Plugin is modifying testCompileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2026-07-15 20:37:33.636
+!MESSAGE Could not download sources for com.vladsch.flexmark:flexmark-all:0.64.8
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not resolve artifact com.vladsch.flexmark:flexmark-all:jar:sources:0.64.8
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$7(MavenImpl.java:581)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:462)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:295)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:281)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:550)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:535)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:308)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:282)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:252)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:220)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:149)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:462)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:342)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:281)
+	at org.eclipse.m2e.core.embedder.IMaven.execute(IMaven.java:300)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Missing com.vladsch.flexmark:flexmark-all:jar:sources:0.64.8
+!SUBENTRY 1 org.eclipse.m2e.core 4 -1 2026-07-15 20:37:33.636
+!MESSAGE Could not resolve artifact com.vladsch.flexmark:flexmark-all:jar:sources:0.64.8
+!SUBENTRY 2 org.eclipse.m2e.core 4 0 2026-07-15 20:37:33.636
+!MESSAGE Missing com.vladsch.flexmark:flexmark-all:jar:sources:0.64.8
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2026-07-15 20:37:35.640
+!MESSAGE Could not download sources for com.vladsch.flexmark:flexmark-util:0.64.8
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not resolve artifact com.vladsch.flexmark:flexmark-util:jar:sources:0.64.8
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$7(MavenImpl.java:581)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:462)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:295)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:281)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:550)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:535)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:308)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:282)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:252)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:220)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:149)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:462)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:342)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:281)
+	at org.eclipse.m2e.core.embedder.IMaven.execute(IMaven.java:300)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Missing com.vladsch.flexmark:flexmark-util:jar:sources:0.64.8
+!SUBENTRY 1 org.eclipse.m2e.core 4 -1 2026-07-15 20:37:35.640
+!MESSAGE Could not resolve artifact com.vladsch.flexmark:flexmark-util:jar:sources:0.64.8
+!SUBENTRY 2 org.eclipse.m2e.core 4 0 2026-07-15 20:37:35.640
+!MESSAGE Missing com.vladsch.flexmark:flexmark-util:jar:sources:0.64.8
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:58.698
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:58.699
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:58.699
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:58.699
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:58.699
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:58.700
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:58.700
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:58.700
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:58.700
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:58.700
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:58.701
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:58.701
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:58.701
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:58.701
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:58.701
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:58.702
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:58.702
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:58.702
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:58.752
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:58.752
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:58.811
+!MESSAGE Plugin is modifying compileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:58.811
+!MESSAGE Plugin is modifying compileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:58.811
+!MESSAGE Plugin is modifying testCompileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:58.811
+!MESSAGE Plugin is modifying testCompileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:59.197
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:59.197
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:59.201
+!MESSAGE Plugin is modifying compileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:59.201
+!MESSAGE Plugin is modifying compileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:59.201
+!MESSAGE Plugin is modifying testCompileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:37:59.201
+!MESSAGE Plugin is modifying testCompileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2026-07-15 20:42:30.527
+!MESSAGE DelegatingStreamConnectionProvider - Stopping Boot LS
+!SESSION 2026-07-15 20:42:50.434 -----------------------------------------------
+eclipse.buildId=4.40.0.202606090740
+java.version=25.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.springframework.boot.ide.branding.springtools
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.springframework.boot.ide.branding.springtools
+
+!ENTRY ch.qos.logback.classic 1 0 2026-07-15 20:42:54.170
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2026-07-15 20:43:30.662
+!MESSAGE Logback config file: /home/paulorfernandes/Development/java/projects/atlassian/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.7.101.20251017-1242.xml
+
+!ENTRY org.eclipse.ui 2 0 2026-07-15 20:43:30.823
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2026-07-15 20:43:30.823
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.ui 2 0 2026-07-15 20:43:30.973
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2026-07-15 20:43:30.973
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.lsp4e 2 0 2026-07-15 20:43:38.005
+!MESSAGE Timed out after waiting for 300ms for semantic tokens from Language Servers
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1981)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2116)
+	at org.eclipse.lsp4e.jdt.LSJavaSemanticTokensProvider.computeSemanticTokens(LSJavaSemanticTokensProvider.java:68)
+	at org.eclipse.jdt.internal.ui.javaeditor.SemanticHighlightingReconciler.getContributedSemanticTokens(SemanticHighlightingReconciler.java:423)
+	at org.eclipse.jdt.internal.ui.javaeditor.SemanticHighlightingReconciler.reconciled(SemanticHighlightingReconciler.java:470)
+	at org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitEditor.reconciled(CompilationUnitEditor.java:1766)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconciled(JavaReconcilingStrategy.java:228)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconciled(JavaCompositeReconcilingStrategy.java:171)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.initialReconcile(JavaCompositeReconcilingStrategy.java:147)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.initialProcess(MonoReconciler.java:98)
+	at org.eclipse.jdt.internal.ui.text.JavaReconciler.initialProcess(JavaReconciler.java:398)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundWorker.lambda$0(AbstractReconciler.java:239)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$ReconcilerJob.run(AbstractReconciler.java:697)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:03.408
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:03.455
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:03.456
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:03.456
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:03.457
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:03.457
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:03.457
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:03.458
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:03.458
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:03.459
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:03.459
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:03.460
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:03.460
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:03.460
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:03.461
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:03.461
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:03.461
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:03.462
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:03.583
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:03.584
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:03.721
+!MESSAGE Plugin is modifying compileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:03.721
+!MESSAGE Plugin is modifying compileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:03.721
+!MESSAGE Plugin is modifying testCompileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:03.721
+!MESSAGE Plugin is modifying testCompileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:04.433
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:04.433
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:04.525
+!MESSAGE Plugin is modifying compileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:04.525
+!MESSAGE Plugin is modifying compileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:04.525
+!MESSAGE Plugin is modifying testCompileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:04.525
+!MESSAGE Plugin is modifying testCompileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2026-07-15 20:44:05.539
+!MESSAGE Could not download javadoc for com.vladsch.flexmark:flexmark-all:0.64.8
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not resolve artifact com.vladsch.flexmark:flexmark-all:jar:javadoc:0.64.8
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$7(MavenImpl.java:581)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:462)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:295)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:281)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:550)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:535)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:308)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:294)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:252)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:220)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:149)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:462)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:342)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:281)
+	at org.eclipse.m2e.core.embedder.IMaven.execute(IMaven.java:300)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Missing com.vladsch.flexmark:flexmark-all:jar:javadoc:0.64.8
+!SUBENTRY 1 org.eclipse.m2e.core 4 -1 2026-07-15 20:44:05.540
+!MESSAGE Could not resolve artifact com.vladsch.flexmark:flexmark-all:jar:javadoc:0.64.8
+!SUBENTRY 2 org.eclipse.m2e.core 4 0 2026-07-15 20:44:05.540
+!MESSAGE Missing com.vladsch.flexmark:flexmark-all:jar:javadoc:0.64.8
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2026-07-15 20:44:06.290
+!MESSAGE Could not download javadoc for com.vladsch.flexmark:flexmark-util:0.64.8
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not resolve artifact com.vladsch.flexmark:flexmark-util:jar:javadoc:0.64.8
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$7(MavenImpl.java:581)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:462)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:295)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:281)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:550)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:535)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:308)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:294)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:252)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:220)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:149)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:462)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:342)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:281)
+	at org.eclipse.m2e.core.embedder.IMaven.execute(IMaven.java:300)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Missing com.vladsch.flexmark:flexmark-util:jar:javadoc:0.64.8
+!SUBENTRY 1 org.eclipse.m2e.core 4 -1 2026-07-15 20:44:06.290
+!MESSAGE Could not resolve artifact com.vladsch.flexmark:flexmark-util:jar:javadoc:0.64.8
+!SUBENTRY 2 org.eclipse.m2e.core 4 0 2026-07-15 20:44:06.290
+!MESSAGE Missing com.vladsch.flexmark:flexmark-util:jar:javadoc:0.64.8
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:11.991
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:11.992
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:11.997
+!MESSAGE Plugin is modifying compileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:11.997
+!MESSAGE Plugin is modifying compileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:11.997
+!MESSAGE Plugin is modifying testCompileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:11.997
+!MESSAGE Plugin is modifying testCompileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.jface 2 0 2026-07-15 20:44:20.438
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2026-07-15 20:44:20.438
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolInWorkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolInWorkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:39.674
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:39.675
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:39.675
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:39.675
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:39.676
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:39.676
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:39.676
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:39.676
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:39.677
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:39.677
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:39.677
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:39.678
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:39.678
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:39.678
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:39.679
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:39.679
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:39.679
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:39.679
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:39.764
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:39.766
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:39.819
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:39.820
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:39.822
+!MESSAGE Plugin is modifying compileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:39.823
+!MESSAGE Plugin is modifying compileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:39.823
+!MESSAGE Plugin is modifying testCompileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:39.823
+!MESSAGE Plugin is modifying testCompileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:41.148
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:41.149
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:41.154
+!MESSAGE Plugin is modifying compileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:41.154
+!MESSAGE Plugin is modifying compileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:41.154
+!MESSAGE Plugin is modifying testCompileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:41.154
+!MESSAGE Plugin is modifying testCompileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:47.129
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:47.130
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:47.130
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:47.130
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:47.130
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:47.131
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:47.131
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:47.131
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:47.132
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:47.132
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:47.132
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:47.133
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:47.133
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:47.133
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:47.133
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:47.134
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:47.134
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:47.134
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:47.185
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:47.186
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:47.236
+!MESSAGE Plugin is modifying compileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:47.236
+!MESSAGE Plugin is modifying compileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:47.236
+!MESSAGE Plugin is modifying testCompileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:47.236
+!MESSAGE Plugin is modifying testCompileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:47.592
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:47.592
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:47.595
+!MESSAGE Plugin is modifying compileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:47.596
+!MESSAGE Plugin is modifying compileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:47.596
+!MESSAGE Plugin is modifying testCompileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:44:47.596
+!MESSAGE Plugin is modifying testCompileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:45:40.696
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:45:40.697
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:45:40.697
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:45:40.697
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:45:40.697
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:45:40.698
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:45:40.698
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:45:40.698
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:45:40.698
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:45:40.699
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:45:40.699
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:45:40.699
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:45:40.699
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:45:40.699
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:45:40.700
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:45:40.700
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:45:40.700
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:45:40.700
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:45:40.750
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:45:40.750
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:45:40.789
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:45:40.789
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:45:40.792
+!MESSAGE Plugin is modifying compileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:45:40.792
+!MESSAGE Plugin is modifying compileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:45:40.792
+!MESSAGE Plugin is modifying testCompileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:45:40.792
+!MESSAGE Plugin is modifying testCompileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:45:48.549
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:45:48.555
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:45:48.558
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:45:48.560
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:45:48.564
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:45:48.565
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:45:48.566
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:45:48.573
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:45:48.575
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:45:48.577
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:45:48.582
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:45:48.583
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:45:48.588
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:45:48.589
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:45:48.594
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:45:48.595
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:45:48.595
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:45:48.596
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:45:49.032
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:45:49.044
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:45:49.392
+!MESSAGE Plugin is modifying compileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:45:49.396
+!MESSAGE Plugin is modifying compileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:45:49.397
+!MESSAGE Plugin is modifying testCompileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:45:49.398
+!MESSAGE Plugin is modifying testCompileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:45:50.814
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:compile (default-compile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:45:50.816
+!MESSAGE Parameter 'testAnnotationProcessorPaths' is unknown for plugin 'maven-compiler-plugin:3.11.0:testCompile (default-testCompile)'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:45:50.834
+!MESSAGE Plugin is modifying compileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:45:50.835
+!MESSAGE Plugin is modifying compileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:45:50.835
+!MESSAGE Plugin is modifying testCompileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:45:50.836
+!MESSAGE Plugin is modifying testCompileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:46:57.249
+!MESSAGE Plugin is modifying compileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:46:57.250
+!MESSAGE Plugin is modifying compileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:46:57.250
+!MESSAGE Plugin is modifying testCompileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:46:57.250
+!MESSAGE Plugin is modifying testCompileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:47:05.716
+!MESSAGE Plugin is modifying compileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:47:05.716
+!MESSAGE Plugin is modifying compileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:47:05.716
+!MESSAGE Plugin is modifying testCompileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:47:05.716
+!MESSAGE Plugin is modifying testCompileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:54:03.153
+!MESSAGE Plugin is modifying compileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:54:03.154
+!MESSAGE Plugin is modifying compileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:54:03.154
+!MESSAGE Plugin is modifying testCompileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-15 20:54:03.154
+!MESSAGE Plugin is modifying testCompileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2026-07-15 20:54:05.077
+!MESSAGE DelegatingStreamConnectionProvider - Stopping Boot LS
+!SESSION 2026-07-16 15:00:57.620 -----------------------------------------------
+eclipse.buildId=4.40.0.202606090740
+java.version=25.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.springframework.boot.ide.branding.springtools
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.springframework.boot.ide.branding.springtools
+
+!ENTRY ch.qos.logback.classic 1 0 2026-07-16 15:01:00.354
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2026-07-16 15:01:07.041
+!MESSAGE Logback config file: /home/paulorfernandes/Development/java/projects/atlassian/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.7.101.20251017-1242.xml
+
+!ENTRY org.eclipse.ui 2 0 2026-07-16 15:01:07.199
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2026-07-16 15:01:07.199
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.ui 2 0 2026-07-16 15:01:07.329
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2026-07-16 15:01:07.329
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-16 15:01:16.074
+!MESSAGE Plugin is modifying compileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-16 15:01:16.075
+!MESSAGE Plugin is modifying compileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-16 15:01:16.075
+!MESSAGE Plugin is modifying testCompileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-16 15:01:16.075
+!MESSAGE Plugin is modifying testCompileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-16 15:01:17.382
+!MESSAGE Plugin is modifying compileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-16 15:01:17.382
+!MESSAGE Plugin is modifying compileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-16 15:01:17.382
+!MESSAGE Plugin is modifying testCompileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-16 15:01:17.382
+!MESSAGE Plugin is modifying testCompileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-16 15:01:36.240
+!MESSAGE Plugin is modifying compileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-16 15:01:36.240
+!MESSAGE Plugin is modifying compileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-16 15:01:36.240
+!MESSAGE Plugin is modifying testCompileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-16 15:01:36.240
+!MESSAGE Plugin is modifying testCompileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-16 15:01:36.622
+!MESSAGE Plugin is modifying compileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-16 15:01:36.622
+!MESSAGE Plugin is modifying compileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-16 15:01:36.622
+!MESSAGE Plugin is modifying testCompileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-16 15:01:36.623
+!MESSAGE Plugin is modifying testCompileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-16 15:02:09.269
+!MESSAGE Plugin is modifying compileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-16 15:02:09.269
+!MESSAGE Plugin is modifying compileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-16 15:02:09.269
+!MESSAGE Plugin is modifying testCompileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-16 15:02:09.269
+!MESSAGE Plugin is modifying testCompileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-16 15:02:38.598
+!MESSAGE Plugin is modifying compileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-16 15:02:38.599
+!MESSAGE Plugin is modifying compileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-16 15:02:38.599
+!MESSAGE Plugin is modifying testCompileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-16 15:02:38.599
+!MESSAGE Plugin is modifying testCompileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.ui.browser 2 0 2026-07-16 15:04:14.331
+!MESSAGE Internal browser is not available: No more handles because there is no underlying browser available.
+Please ensure that WebKit with its GTK 3.x/4.x bindings is installed.
+
+!ENTRY org.eclipse.jface 2 0 2026-07-16 15:11:58.438
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2026-07-16 15:11:58.438
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolInWorkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolInWorkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-16 15:12:18.604
+!MESSAGE Plugin is modifying compileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-16 15:12:18.604
+!MESSAGE Plugin is modifying compileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-16 15:12:18.604
+!MESSAGE Plugin is modifying testCompileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-16 15:12:18.604
+!MESSAGE Plugin is modifying testCompileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-16 15:12:28.487
+!MESSAGE Plugin is modifying compileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-16 15:12:28.487
+!MESSAGE Plugin is modifying compileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-16 15:12:28.487
+!MESSAGE Plugin is modifying testCompileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-16 15:12:28.487
+!MESSAGE Plugin is modifying testCompileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-16 15:12:28.870
+!MESSAGE Plugin is modifying compileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-16 15:12:28.870
+!MESSAGE Plugin is modifying compileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-16 15:12:28.870
+!MESSAGE Plugin is modifying testCompileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-16 15:12:28.870
+!MESSAGE Plugin is modifying testCompileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-16 15:14:29.392
+!MESSAGE Plugin is modifying compileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-16 15:14:29.392
+!MESSAGE Plugin is modifying compileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-16 15:14:29.392
+!MESSAGE Plugin is modifying testCompileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-16 15:14:29.393
+!MESSAGE Plugin is modifying testCompileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-16 15:16:41.578
+!MESSAGE Plugin is modifying compileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-16 15:16:41.578
+!MESSAGE Plugin is modifying compileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addCompileSourceRoot()/removeCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-16 15:16:41.578
+!MESSAGE Plugin is modifying testCompileSourceRoots through clear(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2026-07-16 15:16:41.579
+!MESSAGE Plugin is modifying testCompileSourceRoots through add(), which will not work in Maven 4.0.0. Use MavenProject.addTestCompileSourceRoot()/removeTestCompileSourceRoot() methods instead. If using a plugin, please upgrade to the latest version or report the issue to the plugin maintainer. To disable these warnings, set -Dmaven.project.sourceRoots.warningsDisabled=true on the command line, in the .mvn/maven.config file, or in project POM properties.

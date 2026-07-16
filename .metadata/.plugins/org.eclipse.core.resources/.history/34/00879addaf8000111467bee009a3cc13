@@ -1,0 +1,10 @@
+package com.tsystems.jira.adf.registry;
+
+import com.tsystems.jira.adf.api.ConverterContext;
+import com.tsystems.jira.adf.config.ConverterConfig;
+
+public interface NodeHandler<I, O> {
+
+	O handle(I node, ConverterContext context, ConverterConfig config, HandlerRegistry registry);
+}
+
