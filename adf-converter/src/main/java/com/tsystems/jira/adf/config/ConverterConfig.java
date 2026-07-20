@@ -1,9 +1,5 @@
 package com.tsystems.jira.adf.config;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
-
 import lombok.Builder;
 import lombok.Data;
 
@@ -18,23 +14,8 @@ public class ConverterConfig {
     private boolean escapeHtml = true;
 
     @Builder.Default
-    private boolean autolink = false;
-
-    @Builder.Default
     private String mediaBaseUrl = "";
 
     @Builder.Default
     private boolean mediaPlaceholder = true;
-
-	@Builder.Default
-	private Map<String, Object> tableOptions = new HashMap<>();
-
-	@Builder.Default
-	private Map<String, Object> codeBlockDefaults = new HashMap<>();
-
-    @Builder.Default
-    private Map<String, String> textColorPalette = new HashMap<>();
-
-	@Builder.Default
-	private Set<String> enabledFeatures = Set.of();
 }

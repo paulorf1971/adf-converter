@@ -38,5 +38,13 @@ class MediaUtilTest {
         assertThat(media.getAttrs().get("id")).isEqualTo("abc");
         assertThat(media.getAttrs().get("type")).isEqualTo("file");
     }
-}
 
+    @Test
+    void fromImageSrc_parses_collection_query() {
+        Media media = MediaUtil.fromImageSrc("media:abc?collection=coll&type=file");
+
+        assertThat(media.getAttrs().get("id")).isEqualTo("abc");
+        assertThat(media.getAttrs().get("collection")).isEqualTo("coll");
+        assertThat(media.getAttrs().get("type")).isEqualTo("file");
+    }
+}

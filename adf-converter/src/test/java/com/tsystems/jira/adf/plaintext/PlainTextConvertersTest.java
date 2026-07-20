@@ -115,6 +115,27 @@ class PlainTextConvertersTest {
     }
 
     @Test
+    void inbound_mixed_lists_are_separate_blocks() {
+        String input = "- bullet\n1. ordered\n- [x] done";
+
+        Document doc = PlainTextConverters.inbound(config).convert(input, ctx);
+
+        assertThat(doc.getContent().get(0)).isInstanceOf(BulletList.class);
+        assertThat(doc.getContent().get(1)).isInstanceOf(com.tsystems.jira.adf.model.OrderedList.class);
+        assertThat(doc.getContent().get(2)).isInstanceOf(TaskList.class);
+    }
+
+    @Test
+    void inbound_media_placeholder_becomes_media_single() {
+        Document doc = PlainTextConverters.inbound(config).convert("[media:file-1?collection=coll]", ctx);
+
+        MediaSingle mediaSingle = (MediaSingle) doc.getContent().get(0);
+        Media media = (Media) mediaSingle.getContent().get(0);
+        assertThat(media.getAttrs().get("id")).isEqualTo("file-1");
+        assertThat(media.getAttrs().get("collection")).isEqualTo("coll");
+    }
+
+    @Test
     void inbound_code_fence() {
         String input = "```java\ncode line\n```";
 
@@ -123,6 +144,27 @@ class PlainTextConvertersTest {
 
         assertThat(json).contains("codeBlock");
         assertThat(json).contains("java");
+    }
+
+    @Test
+    void inbound_code_fence_preserves_blank_lines_and_crlf() {
+        String input = "```java\r\nline1\r\n\r\nline2\r\n```";
+
+        Document doc = PlainTextConverters.inbound(config).convert(input, ctx);
+
+        CodeBlock codeBlock = (CodeBlock) doc.getContent().get(0);
+        assertThat(codeBlock.getText()).isEqualTo("line1\n\nline2");
+    }
+
+    @Test
+    void inbound_table_cells_contain_paragraph_blocks() {
+        Document doc = PlainTextConverters.inbound(config).convert("| H |\n| c |", ctx);
+
+        Table table = (Table) doc.getContent().get(0);
+        TableHeader header = (TableHeader) ((TableRow) table.getContent().get(0)).getContent().get(0);
+        TableCell cell = (TableCell) ((TableRow) table.getContent().get(1)).getContent().get(0);
+        assertThat(header.getContent().get(0)).isInstanceOf(Paragraph.class);
+        assertThat(cell.getContent().get(0)).isInstanceOf(Paragraph.class);
     }
 
     @Test

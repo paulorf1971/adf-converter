@@ -14,7 +14,7 @@ HTML → ADF
 
 Plain Text → ADF
 
-Supported ADF Nodes
+Implemented/deserializable ADF Nodes
 
 - blockquote
 - bulletList
@@ -22,19 +22,32 @@ Supported ADF Nodes
 - date
 - doc
 - emoji
-- expand
 - hardBreak
 - heading
-- inlineCard
 - listItem
 - media
 - mediaGroup
+- mediaInline
 - mediaSingle
-- mention
-- nestedExpand
 - orderedList
 - panel
 - paragraph
+- status
+- taskList
+- taskItem
+- decisionList
+- decisionItem
+- table
+- tableRow
+- tableCell
+- tableHeader
+
+Desired but not currently modeled in source
+
+- expand
+- inlineCard
+- mention
+- nestedExpand
 - rule
 
 Supported Marks
@@ -47,3 +60,12 @@ Supported Marks
 - subsup
 - textColor
 - underline
+
+Notes
+
+- Treat this file as feature intent plus current source snapshot; verify exact support in `AdfNode.@JsonSubTypes`, `Mark`, converters, and tests before changing behavior.
+- Inbound table cells are expected to contain paragraph blocks, not direct text nodes.
+- Media metadata should preserve `id`, `type`, and `collection` when present.
+- Plain Text inbound supports `[media:id]` and `[media:id?collection=x]` placeholders as media nodes.
+- Plain Text mixed list kinds are parsed as separate list blocks; nested list structure is not currently modeled.
+- `subsup` and `textColor` marks are modeled but do not have special Markdown/HTML rendering unless support is added later.

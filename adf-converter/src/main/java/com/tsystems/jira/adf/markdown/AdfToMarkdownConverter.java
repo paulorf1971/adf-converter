@@ -97,10 +97,7 @@ public class AdfToMarkdownConverter implements OutboundConverter<String> {
                 sb.append("\n\n");
             }
             case "blockquote" -> {
-                state.pushPrefix("> ");
-                renderChildren(node, sb, state, ctx);
-                state.popPrefix();
-                trimTrailingSpace(sb);
+                sb.append(prefixLines(renderToTemp(node, state, ctx), "> "));
                 sb.append("\n\n");
             }
             case "bulletList" -> {
@@ -110,7 +107,7 @@ public class AdfToMarkdownConverter implements OutboundConverter<String> {
                 sb.append("\n");
             }
             case "orderedList" -> {
-                state.pushList(new ListState("%d. ", 1));
+                state.pushList(new ListState("%d. ", asInt(node.getAttrs(), "order", 1)));
                 renderChildren(node, sb, state, ctx);
                 state.popList();
                 sb.append("\n");
@@ -166,9 +163,7 @@ public class AdfToMarkdownConverter implements OutboundConverter<String> {
     }
 
     private void renderPanel(Panel panel, StringBuilder sb, RenderingState state, ConverterContext ctx) {
-        state.pushPrefix("> ");
-        renderChildren(panel, sb, state, ctx);
-        state.popPrefix();
+        sb.append(prefixLines(renderToTemp(panel, state, ctx), "> "));
         sb.append("\n\n");
     }
 
@@ -257,6 +252,16 @@ public class AdfToMarkdownConverter implements OutboundConverter<String> {
     }
 
     private void renderMedia(AdfNode node, StringBuilder sb) {
+        if (!(node instanceof Media)) {
+            if (node.getContent() != null) {
+                for (AdfNode child : node.getContent()) {
+                    renderMedia(child, sb);
+                    sb.append("\n");
+                }
+                trimTrailingSpace(sb);
+            }
+            return;
+        }
         Media media = asMedia(node);
         String id = asString(media.getAttrs(), "id", "media");
         String type = asString(media.getAttrs(), "type", "file");
@@ -374,6 +379,18 @@ public class AdfToMarkdownConverter implements OutboundConverter<String> {
         while (sb.length() > 0 && Character.isWhitespace(sb.charAt(sb.length() - 1))) {
             sb.setLength(sb.length() - 1);
         }
+    }
+
+    private String prefixLines(String text, String prefix) {
+        String[] lines = text.split("\n", -1);
+        StringBuilder out = new StringBuilder();
+        for (int i = 0; i < lines.length; i++) {
+            out.append(prefix).append(lines[i]);
+            if (i < lines.length - 1) {
+                out.append("\n");
+            }
+        }
+        return out.toString();
     }
 
     private String normalize(String s) {

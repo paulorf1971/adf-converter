@@ -286,6 +286,14 @@ public class AdfToHtmlConverter implements OutboundConverter<String> {
     }
 
     private void renderMedia(AdfNode node, Element parent) {
+        if (!(node instanceof Media)) {
+            if (node.getContent() != null) {
+                for (AdfNode child : node.getContent()) {
+                    renderMedia(child, parent);
+                }
+            }
+            return;
+        }
         Media media = asMedia(node);
         String id = asString(media.getAttrs(), "id", "");
         String type = asString(media.getAttrs(), "type", "file");
@@ -323,6 +331,7 @@ public class AdfToHtmlConverter implements OutboundConverter<String> {
         Element time = parent.appendElement("time");
         if (!ts.isBlank()) {
             String iso = toIso(ts);
+            time.attr("data-adf-timestamp", escapeAttr(ts));
             time.attr("datetime", escapeAttr(iso));
             time.text(iso);
         }

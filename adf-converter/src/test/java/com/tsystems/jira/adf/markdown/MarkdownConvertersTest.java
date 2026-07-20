@@ -1,6 +1,7 @@
 package com.tsystems.jira.adf.markdown;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 import java.util.List;
 
@@ -16,6 +17,7 @@ import com.tsystems.jira.adf.model.Heading;
 import com.tsystems.jira.adf.model.ListItem;
 import com.tsystems.jira.adf.model.Media;
 import com.tsystems.jira.adf.model.MediaSingle;
+import com.tsystems.jira.adf.model.Mark;
 import com.tsystems.jira.adf.model.Paragraph;
 import com.tsystems.jira.adf.model.Table;
 import com.tsystems.jira.adf.model.TableCell;
@@ -42,6 +44,33 @@ class MarkdownConvertersTest {
         String md = MarkdownConverters.outbound(config).convert(doc, ctx);
 
         assertThat(md).isEqualTo("Hello **bold** world");
+    }
+
+    @Test
+    void outbound_supported_marks_and_unknown_mark_behavior() {
+        Document doc = new Document(List.of(new Paragraph(List.of(
+                new Text("code", List.of(Mark.code())),
+                new Text(" "),
+                new Text("em", List.of(Mark.em())),
+                new Text(" "),
+                new Text("strong", List.of(Mark.strong())),
+                new Text(" "),
+                new Text("strike", List.of(Mark.strike())),
+                new Text(" "),
+                new Text("underline", List.of(Mark.underline())),
+                new Text(" "),
+                new Text("link", List.of(Mark.link("https://example.com", null)))
+        ))));
+
+        String md = MarkdownConverters.outbound(config).convert(doc, ctx);
+
+        assertThat(md).contains("`code`", "_em_", "**strong**", "~~strike~~", "<u>underline</u>", "[link](https://example.com)");
+        assertThatThrownBy(() -> MarkdownConverters.outbound(config).convert(
+                new Document(List.of(new Paragraph(List.of(new Text("sub", List.of(Mark.subSup("sub"))))))), ctx))
+                .isInstanceOf(com.tsystems.jira.adf.api.ConversionException.class);
+        assertThatThrownBy(() -> MarkdownConverters.outbound(config).convert(
+                new Document(List.of(new Paragraph(List.of(new Text("red", List.of(Mark.textColor("#ff0000"))))))), ctx))
+                .isInstanceOf(com.tsystems.jira.adf.api.ConversionException.class);
     }
 
     @Test
@@ -87,6 +116,31 @@ class MarkdownConvertersTest {
         assertThat(mdBack).contains("- [x] done");
         assertThat(mdBack).contains("| H1 |");
         assertThat(mdBack).contains("media:123");
+    }
+
+    @Test
+    void inbound_table_cells_contain_paragraph_blocks() {
+        Document doc = MarkdownConverters.inbound(config).convert("| H |\n| --- |\n| c |", ctx);
+
+        Table table = (Table) doc.getContent().get(0);
+        TableHeader header = (TableHeader) ((TableRow) table.getContent().get(0)).getContent().get(0);
+        TableCell cell = (TableCell) ((TableRow) table.getContent().get(1)).getContent().get(0);
+        assertThat(header.getContent().get(0)).isInstanceOf(Paragraph.class);
+        assertThat(cell.getContent().get(0)).isInstanceOf(Paragraph.class);
+    }
+
+    @Test
+    void outbound_ordered_list_uses_order_attr_and_blockquote_prefixes_lines() {
+        Document doc = new Document(List.of(
+                new com.tsystems.jira.adf.model.OrderedList(3, List.of(new ListItem(List.of(new Paragraph(List.of(new Text("third"))))))),
+                new Blockquote(List.of(new Paragraph(List.of(new Text("Hello "), new Text("world")))))
+        ));
+
+        String md = MarkdownConverters.outbound(config).convert(doc, ctx);
+
+        assertThat(md).contains("3. third");
+        assertThat(md).contains("> Hello world");
+        assertThat(md).doesNotContain("> Hello > world");
     }
 
     @Test

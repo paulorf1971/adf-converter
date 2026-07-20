@@ -322,7 +322,7 @@ public class MarkdownToAdfConverter implements InboundConverter<String> {
     }
 
     private AdfNode mapTableCell(com.vladsch.flexmark.ext.tables.TableCell tc, boolean header) {
-        List<AdfNode> content = mapInlineChildren(tc);
+        List<AdfNode> content = List.of(new Paragraph(mapInlineChildren(tc)));
         if (header) {
             return new TableHeader(content, Map.of());
         }

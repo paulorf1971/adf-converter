@@ -63,10 +63,14 @@ public class HtmlToAdfConverter implements InboundConverter<String> {
         Document doc = Jsoup.parse(input, "", Parser.htmlParser());
         stripUnsafe(doc);
         List<AdfNode> content = new ArrayList<>();
-        for (Element child : doc.body().children()) {
-            AdfNode mapped = mapBlock(child);
-            if (mapped != null) {
-                content.add(mapped);
+        for (Node child : doc.body().childNodes()) {
+            if (child instanceof Element el) {
+                AdfNode mapped = mapBlock(el);
+                if (mapped != null) {
+                    content.add(mapped);
+                }
+            } else if (child instanceof TextNode tn && !tn.text().isBlank()) {
+                content.add(new Paragraph(List.of(new Text(tn.text()))));
             }
         }
         return new com.tsystems.jira.adf.model.Document(1, content);
@@ -145,7 +149,7 @@ public class HtmlToAdfConverter implements InboundConverter<String> {
             case "img":
                 return mapMedia(el);
             case "time":
-                return new DateNode(el.attr("datetime"));
+                return new DateNode(el.hasAttr("data-adf-timestamp") ? el.attr("data-adf-timestamp") : el.attr("datetime"));
             case "br":
                 return new HardBreak();
             case "li":
@@ -192,16 +196,40 @@ public class HtmlToAdfConverter implements InboundConverter<String> {
 
     private List<AdfNode> mapBlockChildren(Element el) {
         List<AdfNode> blocks = new ArrayList<>();
+        List<AdfNode> inline = new ArrayList<>();
         for (Node child : el.childNodes()) {
             if (child instanceof Element cEl) {
+                if (cEl.tagName().equals("input")) {
+                    continue;
+                }
+                if (!isBlockElement(cEl)) {
+                    inline.addAll(mapInline(cEl, new ArrayList<>()));
+                    continue;
+                }
+                if (!inline.isEmpty()) {
+                    blocks.add(new Paragraph(inline));
+                    inline = new ArrayList<>();
+                }
                 AdfNode n = mapBlock(cEl);
                 if (n != null) blocks.add(n);
+            } else if (child instanceof TextNode tn && !tn.text().isBlank()) {
+                inline.add(new Text(tn.text()));
             }
+        }
+        if (!inline.isEmpty()) {
+            blocks.add(new Paragraph(inline));
         }
         if (blocks.isEmpty()) {
             blocks.add(new Paragraph(mapInlineChildren(el)));
         }
         return blocks;
+    }
+
+    private boolean isBlockElement(Element el) {
+        return switch (el.tagName()) {
+            case "p", "h1", "h2", "h3", "h4", "h5", "h6", "blockquote", "ul", "ol", "pre", "table", "div" -> true;
+            default -> false;
+        };
     }
 
     private List<AdfNode> mapInlineChildren(Element el) {
@@ -263,7 +291,7 @@ public class HtmlToAdfConverter implements InboundConverter<String> {
                 }
                 case "br" -> { out.add(new HardBreak()); return out; }
                 case "img" -> { out.add(mapMediaInline(el)); return out; }
-                case "time" -> { out.add(new DateNode(el.attr("datetime"))); return out; }
+                case "time" -> { out.add(new DateNode(el.hasAttr("data-adf-timestamp") ? el.attr("data-adf-timestamp") : el.attr("datetime"))); return out; }
                 default -> el.childNodes().forEach(c -> out.addAll(mapInline(c, inherited)));
             }
         }
@@ -303,7 +331,7 @@ public class HtmlToAdfConverter implements InboundConverter<String> {
         if (rowspan != null) attrs.put("rowspan", rowspan);
         if (background != null) attrs.put("background", background);
         if (align != null && !align.isBlank()) attrs.put("align", align);
-        List<AdfNode> content = mapInlineChildren(cell);
+        List<AdfNode> content = List.of(new Paragraph(mapInlineChildren(cell)));
         return header ? new TableHeader(content, attrs) : new TableCell(content, attrs);
     }
 
@@ -325,14 +353,24 @@ public class HtmlToAdfConverter implements InboundConverter<String> {
     }
 
     private AdfNode mapMedia(Element img) {
-        String src = img.attr("src");
-        Media media = MediaUtil.fromImageSrc(src);
+        Media media = MediaUtil.fromImageSrc(img.attr("src"));
+        if (img.hasAttr("data-media-collection")) {
+            media.getAttrs().put("collection", img.attr("data-media-collection"));
+        }
+        if (img.hasAttr("data-media-type")) {
+            media.getAttrs().put("type", img.attr("data-media-type"));
+        }
         return new MediaSingle(List.of(media));
     }
 
     private AdfNode mapMediaInline(Element img) {
-        String src = img.attr("src");
-        Media media = MediaUtil.fromImageSrc(src);
+        Media media = MediaUtil.fromImageSrc(img.attr("src"));
+        if (img.hasAttr("data-media-collection")) {
+            media.getAttrs().put("collection", img.attr("data-media-collection"));
+        }
+        if (img.hasAttr("data-media-type")) {
+            media.getAttrs().put("type", img.attr("data-media-type"));
+        }
         return new MediaInline(List.of(media));
     }
 }

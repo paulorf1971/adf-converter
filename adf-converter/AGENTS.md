@@ -4,12 +4,14 @@
 - This directory is the Maven project root; run project commands from here.
 - Ignore generated/build output under `target/` when inspecting or editing code.
 - IDE metadata (`.classpath`, `.project`, `.settings/`, `.factorypath`) is present; prefer Maven/source files over IDE config.
+- OpenCode project memory lives under `.opencode/project/`; start with `.opencode/project/README.md` when project context is needed.
 
 ## Commands
 - Full verification: `./mvnw test`.
 - Focused test class: `./mvnw -Dtest=MarkdownConvertersTest test`.
 - Focused test method: `./mvnw -Dtest=MarkdownConvertersTest#inbound_simple_roundtrip test`.
 - Compile without tests: `./mvnw test-compile`.
+- Dependency scan: `./mvnw -Pdependency-check dependency-check:check`.
 
 ## Project Shape
 - Java 17, Spring Boot `4.1.0`, Maven wrapper `3.9.16`; Lombok annotation processing is configured in `pom.xml`.
@@ -20,12 +22,12 @@
 - Shared JSON behavior goes through `JsonUtil.mapper()`; it disables unknown-property failures and omits nulls.
 - Markdown parsing uses flexmark with tables, task lists, autolinks, emoji, and strikethrough extensions; HTML parsing uses jsoup and strips `script`/`style`.
 
-## Memory Bank
-- `.roo/rules/memory-bank.md` describes RooCode workflow, not OpenCode workflow; do not blindly follow its instruction to read every memory file for every task.
-- Use `.roo/memory-bank/projectbrief.md`, `productContext.md`, and `systemPatterns.md` for product intent: bidirectional ADF conversion for Markdown, HTML, and Plain Text.
-- Use `.roo/memory-bank/features/testing.md` as testing goals only; current executable coverage is in `src/test/java`.
-- Treat `.roo/memory-bank/activeContext.md`, `progress.md`, and `architecture/*` as historical/aspirational context. Some claims are stale: source now has Markdown, HTML, and Plain Text converters, while `.roo` still calls some converters examples.
-- Treat `.roo/memory-bank/features/adf-converters.md` as a desired coverage list, not current truth. The implemented/deserializable node set is the `@JsonSubTypes` list in `AdfNode`.
+## OpenCode Workflow
+- Use `.opencode/project/context.md` for product and architecture context.
+- Use `.opencode/project/workflow.md` for change workflow and source-of-truth rules.
+- Use `.opencode/project/testing.md` for test conventions and commands.
+- Use `.opencode/project/status.md` for current verified state, dependencies, decisions, and known limitations.
+- `.roo/**` is historical RooCode memory; do not treat it as canonical when it conflicts with source, tests, `AGENTS.md`, or `.opencode/project/`.
 
 ## Testing Notes
 - Tests use JUnit 5 and AssertJ from `spring-boot-starter-test`; no database, server, or external service is required.

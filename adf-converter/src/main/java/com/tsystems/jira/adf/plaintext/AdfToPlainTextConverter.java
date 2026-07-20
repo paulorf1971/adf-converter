@@ -217,6 +217,16 @@ public class AdfToPlainTextConverter implements OutboundConverter<String> {
     }
 
     private void renderMedia(AdfNode node, StringBuilder sb) {
+        if (!(node instanceof Media)) {
+            if (node.getContent() != null) {
+                for (AdfNode child : node.getContent()) {
+                    renderMedia(child, sb);
+                    sb.append("\n");
+                }
+                trimTrailingNewlines(sb);
+            }
+            return;
+        }
         Media media = asMedia(node);
         String id = asString(media.getAttrs(), "id", "media");
         String placeholder = MediaUtil.placeholder(id, asString(media.getAttrs(), "type", "file"), asString(media.getAttrs(), "collection", null), config.getMediaBaseUrl());

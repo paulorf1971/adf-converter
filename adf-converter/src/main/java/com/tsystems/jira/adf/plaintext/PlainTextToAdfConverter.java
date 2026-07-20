@@ -15,6 +15,8 @@ import com.tsystems.jira.adf.model.BulletList;
 import com.tsystems.jira.adf.model.CodeBlock;
 import com.tsystems.jira.adf.model.Document;
 import com.tsystems.jira.adf.model.HardBreak;
+import com.tsystems.jira.adf.model.Media;
+import com.tsystems.jira.adf.model.MediaSingle;
 import com.tsystems.jira.adf.model.OrderedList;
 import com.tsystems.jira.adf.model.Paragraph;
 import com.tsystems.jira.adf.model.Table;
@@ -24,6 +26,7 @@ import com.tsystems.jira.adf.model.TableRow;
 import com.tsystems.jira.adf.model.TaskItem;
 import com.tsystems.jira.adf.model.TaskList;
 import com.tsystems.jira.adf.model.Text;
+import com.tsystems.jira.adf.util.MediaUtil;
 
 /**
  * Minimal Plain Text → ADF parser.
@@ -34,6 +37,7 @@ public class PlainTextToAdfConverter implements InboundConverter<String> {
     private static final Pattern BULLET_PATTERN = Pattern.compile("^(\\s*)([-*]) (.*)$");
     private static final Pattern TASK_PATTERN = Pattern.compile("^(\\s*)- \\[( |x|X)\\] (.*)$");
     private static final Pattern CODE_FENCE_PATTERN = Pattern.compile("^```(.*)$");
+    private static final Pattern MEDIA_PATTERN = Pattern.compile("^\\[media:([^]]+)]$");
 
     private final ConverterConfig config;
 
@@ -48,30 +52,64 @@ public class PlainTextToAdfConverter implements InboundConverter<String> {
         }
 
         List<AdfNode> blocks = new ArrayList<>();
-        String[] paragraphs = input.split("\\n\\n");
-        for (String para : paragraphs) {
-            if (para.isBlank()) {
+        List<String> current = new ArrayList<>();
+        boolean inCodeFence = false;
+        String normalizedInput = input.replace("\r\n", "\n").replace('\r', '\n');
+        for (String line : normalizedInput.split("\n", -1)) {
+            if (CODE_FENCE_PATTERN.matcher(line).matches()) {
+                current.add(line);
+                if (inCodeFence) {
+                    blocks.addAll(parseBlocks(String.join("\n", current)));
+                    current.clear();
+                }
+                inCodeFence = !inCodeFence;
                 continue;
             }
-            blocks.add(parseParagraph(para));
+            if (!inCodeFence && line.isBlank()) {
+                if (!current.isEmpty()) {
+                    blocks.addAll(parseBlocks(String.join("\n", current)));
+                    current.clear();
+                }
+                continue;
+            }
+            current.add(line);
+        }
+        if (!current.isEmpty()) {
+            blocks.addAll(parseBlocks(String.join("\n", current)));
         }
         return new Document(1, blocks);
     }
 
-    private AdfNode parseParagraph(String para) {
+    private List<AdfNode> parseBlocks(String para) {
         List<String> lines = List.of(para.split("\\n", -1));
         if (isCodeFence(lines)) {
-            return parseCodeFence(lines);
+            return List.of(parseCodeFence(lines));
+        }
+        MediaSingle media = parseMedia(lines);
+        if (media != null) {
+            return List.of(media);
         }
         Table table = parseTable(lines);
         if (table != null) {
-            return table;
+            return List.of(table);
         }
         List<AdfNode> list = parseList(lines);
         if (list != null) {
-            return list.get(0);
+            return list;
         }
-        return new Paragraph(mapLinesToInline(lines));
+        return List.of(new Paragraph(mapLinesToInline(lines)));
+    }
+
+    private MediaSingle parseMedia(List<String> lines) {
+        if (lines.size() != 1) {
+            return null;
+        }
+        Matcher matcher = MEDIA_PATTERN.matcher(lines.get(0).trim());
+        if (!matcher.matches()) {
+            return null;
+        }
+        Media media = MediaUtil.fromImageSrc("media:" + matcher.group(1));
+        return new MediaSingle(List.of(media));
     }
 
     private boolean isCodeFence(List<String> lines) {
@@ -85,13 +123,14 @@ public class PlainTextToAdfConverter implements InboundConverter<String> {
             language = m.group(1).trim();
         }
         StringBuilder body = new StringBuilder();
-        for (int i = 1; i < lines.size(); i++) {
+        int end = lines.size();
+        if (end > 1 && lines.get(end - 1).startsWith("```")) {
+            end--;
+        }
+        for (int i = 1; i < end; i++) {
             String line = lines.get(i);
-            if (line.startsWith("```") && i == lines.size() - 1) {
-                break;
-            }
             body.append(line);
-            if (i < lines.size() - 1) {
+            if (i < end - 1) {
                 body.append("\n");
             }
         }
@@ -111,7 +150,7 @@ public class PlainTextToAdfConverter implements InboundConverter<String> {
             boolean header = rows.isEmpty();
             List<AdfNode> rowCells = new ArrayList<>();
             for (String cell : cells) {
-                List<AdfNode> content = List.of(new Text(cell));
+                List<AdfNode> content = List.of(new Paragraph(List.of(new Text(cell))));
                 rowCells.add(header ? new TableHeader(content, null) : new TableCell(content, null));
             }
             rows.add(new TableRow(rowCells));
@@ -162,31 +201,34 @@ public class PlainTextToAdfConverter implements InboundConverter<String> {
             return null;
         }
 
-        // Minimal: single-level lists based on first item kind.
-        LineKind kind = items.get(0).kind;
+        List<AdfNode> lists = new ArrayList<>();
+        int index = 0;
+        while (index < items.size()) {
+            LineKind kind = items.get(index).kind;
+            List<ListItemLine> group = new ArrayList<>();
+            while (index < items.size() && items.get(index).kind == kind) {
+                group.add(items.get(index));
+                index++;
+            }
+            lists.add(toList(kind, group));
+        }
+        return lists;
+    }
+
+    private AdfNode toList(LineKind kind, List<ListItemLine> items) {
         if (kind == LineKind.TASK) {
             List<AdfNode> taskItems = new ArrayList<>();
             for (ListItemLine item : items) {
                 String state = item.done ? "DONE" : "TODO";
                 taskItems.add(new TaskItem(null, state, List.of(new Paragraph(mapLinesToInline(List.of(item.text))))));
             }
-            return List.of(new TaskList(taskItems));
+            return new TaskList(taskItems);
         }
-        if (kind == LineKind.ORDERED) {
-            List<AdfNode> li = new ArrayList<>();
-            for (ListItemLine item : items) {
-                li.add(new com.tsystems.jira.adf.model.ListItem(List.of(new Paragraph(mapLinesToInline(List.of(item.text))))));
-            }
-            return List.of(new OrderedList(li));
+        List<AdfNode> listItems = new ArrayList<>();
+        for (ListItemLine item : items) {
+            listItems.add(new com.tsystems.jira.adf.model.ListItem(List.of(new Paragraph(mapLinesToInline(List.of(item.text))))));
         }
-        if (kind == LineKind.BULLET) {
-            List<AdfNode> li = new ArrayList<>();
-            for (ListItemLine item : items) {
-                li.add(new com.tsystems.jira.adf.model.ListItem(List.of(new Paragraph(mapLinesToInline(List.of(item.text))))));
-            }
-            return List.of(new BulletList(li));
-        }
-        return null;
+        return kind == LineKind.ORDERED ? new OrderedList(listItems) : new BulletList(listItems);
     }
 
     private List<AdfNode> mapLinesToInline(List<String> lines) {

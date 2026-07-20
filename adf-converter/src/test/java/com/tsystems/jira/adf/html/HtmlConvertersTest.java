@@ -143,6 +143,47 @@ class HtmlConvertersTest {
     }
 
     @Test
+    void inbound_task_item_preserves_text_and_state() {
+        String html = "<ul class='task-list'><li><input type='checkbox' checked='checked'/>Task text</li></ul>";
+
+        Document doc = HtmlConverters.inbound(config).convert(html, ctx);
+
+        TaskList taskList = (TaskList) doc.getContent().get(0);
+        TaskItem taskItem = (TaskItem) taskList.getContent().get(0);
+        Paragraph paragraph = (Paragraph) taskItem.getContent().get(0);
+        Text text = (Text) paragraph.getContent().get(0);
+        assertThat(taskItem.getAttrs().get("state")).isEqualTo("DONE");
+        assertThat(text.getText()).isEqualTo("Task text");
+    }
+
+    @Test
+    void inbound_table_cells_contain_paragraph_blocks() {
+        Document doc = HtmlConverters.inbound(config).convert("<table><tr><th>H</th></tr><tr><td>C</td></tr></table>", ctx);
+
+        Table table = (Table) doc.getContent().get(0);
+        TableHeader header = (TableHeader) ((TableRow) table.getContent().get(0)).getContent().get(0);
+        TableCell cell = (TableCell) ((TableRow) table.getContent().get(1)).getContent().get(0);
+        assertThat(header.getContent().get(0)).isInstanceOf(Paragraph.class);
+        assertThat(cell.getContent().get(0)).isInstanceOf(Paragraph.class);
+    }
+
+    @Test
+    void date_and_media_metadata_round_trip_through_html() {
+        Document doc = new Document(List.of(
+                new Paragraph(List.of(new DateNode("1700000000000"))),
+                new MediaSingle(List.of(new Media("abc", "file", "coll", null, null)))
+        ));
+
+        Document back = HtmlConverters.inbound(config).convert(HtmlConverters.outbound(config).convert(doc, ctx), ctx);
+
+        DateNode date = (DateNode) ((Paragraph) back.getContent().get(0)).getContent().get(0);
+        Media media = (Media) ((MediaSingle) back.getContent().get(1)).getContent().get(0);
+        assertThat(date.getAttrs().get("timestamp")).isEqualTo("1700000000000");
+        assertThat(media.getAttrs().get("id")).isEqualTo("abc");
+        assertThat(media.getAttrs().get("collection")).isEqualTo("coll");
+    }
+
+    @Test
     void outbound_media_placeholder_respects_config() {
         ConverterConfig cfg = ConverterConfig.builder().mediaBaseUrl("https://cdn.example/").mediaPlaceholder(true).build();
         Document doc = new Document(List.of(new MediaSingle(List.of(new Media("abc", "file", "coll", null, null)))));

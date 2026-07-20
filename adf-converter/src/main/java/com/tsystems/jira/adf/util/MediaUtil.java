@@ -1,7 +1,9 @@
 package com.tsystems.jira.adf.util;
 
 import java.net.URLEncoder;
+import java.net.URLDecoder;
 import java.nio.charset.StandardCharsets;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
@@ -52,7 +54,18 @@ public final class MediaUtil {
         if (id.startsWith("media:")) {
             id = id.substring("media:".length());
         }
-        return new Media(id, "file", null, null, null);
+        Map<String, String> query = new HashMap<>();
+        int queryStart = id.indexOf('?');
+        if (queryStart >= 0) {
+            String queryString = id.substring(queryStart + 1);
+            id = id.substring(0, queryStart);
+            for (String param : queryString.split("&")) {
+                String[] pair = param.split("=", 2);
+                if (pair.length == 2) {
+                    query.put(URLDecoder.decode(pair[0], StandardCharsets.UTF_8), URLDecoder.decode(pair[1], StandardCharsets.UTF_8));
+                }
+            }
+        }
+        return new Media(id, query.getOrDefault("type", "file"), query.get("collection"), null, null);
     }
 }
-
