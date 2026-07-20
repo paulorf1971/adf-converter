@@ -49,7 +49,7 @@ class MarkdownConvertersTest {
         Document doc = new Document(List.of(
                 new Heading(2, List.of(new Text("Title"))),
                 new Blockquote(List.of(new Paragraph(List.of(new Text("quote"))))),
-                new BulletList(List.of(new ListItem(List.of(new Paragraph(List.of(new Text("item1")))))),
+                new BulletList(List.of(new ListItem(List.of(new Paragraph(List.of(new Text("item1"))))))),
                 new CodeBlock("java", "System.out.println(\"hi\");"),
                 new Table(List.of(
                         new TableRow(List.of(

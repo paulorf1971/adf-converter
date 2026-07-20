@@ -199,7 +199,7 @@ public class MarkdownToAdfConverter implements InboundConverter<String> {
     }
 
     private TaskItem mapTaskItem(TaskListItem tli) {
-        boolean done = tli.isChecked();
+        boolean done = tli.isItemDoneMarker();
         String state = done ? "DONE" : "TODO";
         List<AdfNode> inline = mapInlineChildren(tli);
         return new TaskItem(null, state, List.of(new Paragraph(inline)));
@@ -279,7 +279,7 @@ public class MarkdownToAdfConverter implements InboundConverter<String> {
             return result;
         }
         if (node instanceof com.vladsch.flexmark.ext.emoji.Emoji emoji) {
-            String shortName = emoji.getEmoji().getShortCut();
+            String shortName = emoji.getText().toString();
             result.add(new Emoji(shortName, null, emoji.getChars().toString()));
             return result;
         }
@@ -289,7 +289,7 @@ public class MarkdownToAdfConverter implements InboundConverter<String> {
         return result;
     }
 
-    private AdfNode mapTable(TableBlock block) {
+    private Table mapTable(TableBlock block) {
         List<AdfNode> rows = new ArrayList<>();
         for (Node section = block.getFirstChild(); section != null; section = section.getNext()) {
             if (section instanceof TableHead head) {
@@ -304,7 +304,7 @@ public class MarkdownToAdfConverter implements InboundConverter<String> {
     private List<AdfNode> mapTableSection(Node section, boolean header) {
         List<AdfNode> rows = new ArrayList<>();
         for (Node row = section.getFirstChild(); row != null; row = row.getNext()) {
-            if (row instanceof TableRow tr) {
+            if (row instanceof com.vladsch.flexmark.ext.tables.TableRow tr) {
                 rows.add(mapTableRow(tr, header));
             }
         }

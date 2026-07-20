@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.List;
+import java.util.Map;
 
 import org.junit.jupiter.api.Test;
 
@@ -17,12 +18,12 @@ import com.tsystems.jira.adf.model.Text;
 class JsonUtilTest {
 
 	@Test
-	void shouldBuildConfigAndSerializeDocument() {
+	void shouldBuildConfigAndSerializeDocument() throws Exception {
 		ConverterConfig config = ConverterConfig.builder()
 				.allowUnknownMarks(true)
 				.escapeHtml(false)
 				.mediaBaseUrl("https://example.com")
-				.textColor("red", "#ff0000")
+				.textColorPalette(Map.of("red", "#ff0000"))
 				.build();
 
 		assertTrue(config.isAllowUnknownMarks());
@@ -38,4 +39,3 @@ class JsonUtilTest {
 		assertTrue(node.get("content").isArray());
 	}
 }
-

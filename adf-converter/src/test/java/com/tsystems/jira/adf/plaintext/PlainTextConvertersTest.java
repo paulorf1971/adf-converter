@@ -48,9 +48,9 @@ class PlainTextConvertersTest {
     void outbound_heading_lists_task_code_table_media() {
         Document doc = new Document(List.of(
                 new Heading(2, List.of(new Text("Title"))),
-                new BulletList(List.of(new ListItem(List.of(new Paragraph(List.of(new Text("item1")))))),
-                new com.tsystems.jira.adf.model.OrderedList(List.of(new ListItem(List.of(new Paragraph(List.of(new Text("first")))))),
-                new TaskList(List.of(new TaskItem("1", "DONE", List.of(new Paragraph(List.of(new Text("task")))))),
+                new BulletList(List.of(new ListItem(List.of(new Paragraph(List.of(new Text("item1"))))) )),
+                new com.tsystems.jira.adf.model.OrderedList(List.of(new ListItem(List.of(new Paragraph(List.of(new Text("first"))))) )),
+                new TaskList(List.of(new TaskItem("1", "DONE", List.of(new Paragraph(List.of(new Text("task"))))) )),
                 new CodeBlock("java", "System.out.println(\"hi\");"),
                 new Table(List.of(
                         new TableRow(List.of(
@@ -129,7 +129,7 @@ class PlainTextConvertersTest {
     void round_trip_paragraph_and_list() {
         Document doc = new Document(List.of(
                 new Paragraph(List.of(new Text("Hello"))),
-                new BulletList(List.of(new ListItem(List.of(new Paragraph(List.of(new Text("item"))))))
+                new BulletList(List.of(new ListItem(List.of(new Paragraph(List.of(new Text("item")))))))
         ));
 
         String txt = PlainTextConverters.outbound(config).convert(doc, ctx);

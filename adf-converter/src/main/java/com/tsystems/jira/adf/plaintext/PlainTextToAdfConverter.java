@@ -17,6 +17,10 @@ import com.tsystems.jira.adf.model.Document;
 import com.tsystems.jira.adf.model.HardBreak;
 import com.tsystems.jira.adf.model.OrderedList;
 import com.tsystems.jira.adf.model.Paragraph;
+import com.tsystems.jira.adf.model.Table;
+import com.tsystems.jira.adf.model.TableCell;
+import com.tsystems.jira.adf.model.TableHeader;
+import com.tsystems.jira.adf.model.TableRow;
 import com.tsystems.jira.adf.model.TaskItem;
 import com.tsystems.jira.adf.model.TaskList;
 import com.tsystems.jira.adf.model.Text;
@@ -59,6 +63,10 @@ public class PlainTextToAdfConverter implements InboundConverter<String> {
         if (isCodeFence(lines)) {
             return parseCodeFence(lines);
         }
+        Table table = parseTable(lines);
+        if (table != null) {
+            return table;
+        }
         List<AdfNode> list = parseList(lines);
         if (list != null) {
             return list.get(0);
@@ -88,6 +96,48 @@ public class PlainTextToAdfConverter implements InboundConverter<String> {
             }
         }
         return new CodeBlock(language.isBlank() ? null : language, body.toString());
+    }
+
+    private Table parseTable(List<String> lines) {
+        List<AdfNode> rows = new ArrayList<>();
+        for (String line : lines) {
+            List<String> cells = parseTableLine(line);
+            if (cells == null) {
+                return null;
+            }
+            if (isDelimiterRow(cells)) {
+                continue;
+            }
+            boolean header = rows.isEmpty();
+            List<AdfNode> rowCells = new ArrayList<>();
+            for (String cell : cells) {
+                List<AdfNode> content = List.of(new Text(cell));
+                rowCells.add(header ? new TableHeader(content, null) : new TableCell(content, null));
+            }
+            rows.add(new TableRow(rowCells));
+        }
+        return rows.isEmpty() ? null : new Table(rows);
+    }
+
+    private List<String> parseTableLine(String line) {
+        if (line == null || !line.contains("|")) {
+            return null;
+        }
+        String trimmed = line.trim();
+        if (!trimmed.startsWith("|") || !trimmed.endsWith("|")) {
+            return null;
+        }
+        String inner = trimmed.substring(1, trimmed.length() - 1);
+        String[] parts = inner.split("\\|", -1);
+        List<String> cells = new ArrayList<>();
+        for (String part : parts) {
+            cells.add(part.trim());
+        }
+        return cells;
+    }
+
+    private boolean isDelimiterRow(List<String> cells) {
+        return !cells.isEmpty() && cells.stream().allMatch(cell -> cell.matches(":?-{3,}:?"));
     }
 
     private List<AdfNode> parseList(List<String> lines) {

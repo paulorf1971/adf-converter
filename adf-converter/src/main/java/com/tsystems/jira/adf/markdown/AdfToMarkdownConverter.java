@@ -224,6 +224,7 @@ public class AdfToMarkdownConverter implements OutboundConverter<String> {
         boolean headerRow = !rows.isEmpty() && isHeaderRow(rows.get(0));
         for (AdfNode row : rows) {
             renderChildren(row, sb, state, ctx);
+            sb.append("|");
             sb.append("\n");
             if (headerRow) {
                 List<AdfNode> cells = row.getContent();

@@ -270,7 +270,7 @@ public class HtmlToAdfConverter implements InboundConverter<String> {
         return out;
     }
 
-    private AdfNode mapTable(Element table) {
+    private Table mapTable(Element table) {
         List<AdfNode> rows = new ArrayList<>();
         Element thead = table.selectFirst("thead");
         Element tbody = table.selectFirst("tbody");

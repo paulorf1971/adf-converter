@@ -58,7 +58,7 @@ class HtmlConvertersTest {
         Document doc = new Document(List.of(
                 new Heading(2, List.of(new Text("Title"))),
                 new Blockquote(List.of(new Paragraph(List.of(new Text("quote"))))),
-                new BulletList(List.of(new ListItem(List.of(new Paragraph(List.of(new Text("item1")))))),
+                new BulletList(List.of(new ListItem(List.of(new Paragraph(List.of(new Text("item1"))))))),
                 new CodeBlock("java", "System.out.println(\"hi\");"),
                 new Table(List.of(
                         new TableRow(List.of(
@@ -88,7 +88,7 @@ class HtmlConvertersTest {
         assertThat(html).contains("background:#eee;");
         assertThat(html).contains("class=\"task-list\"");
         assertThat(html).contains("data-status-color");
-        assertThat(html).contains("data-panel-type\"info\"");
+        assertThat(html).contains("data-panel-type=\"info\"");
         assertThat(html).contains("<img");
     }
 
