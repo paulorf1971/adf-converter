@@ -3,7 +3,6 @@ package com.tsystems.jira.adf.html;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 import java.util.Optional;
 
 import org.jsoup.Jsoup;
@@ -13,8 +12,8 @@ import org.jsoup.nodes.Node;
 import org.jsoup.nodes.TextNode;
 import org.jsoup.parser.Parser;
 
-import com.tsystems.jira.adf.api.ConverterContext;
 import com.tsystems.jira.adf.api.ConversionException;
+import com.tsystems.jira.adf.api.ConverterContext;
 import com.tsystems.jira.adf.api.InboundConverter;
 import com.tsystems.jira.adf.config.ConverterConfig;
 import com.tsystems.jira.adf.model.AdfNode;
@@ -30,7 +29,6 @@ import com.tsystems.jira.adf.model.Heading;
 import com.tsystems.jira.adf.model.ListItem;
 import com.tsystems.jira.adf.model.Mark;
 import com.tsystems.jira.adf.model.Media;
-import com.tsystems.jira.adf.model.MediaGroup;
 import com.tsystems.jira.adf.model.MediaInline;
 import com.tsystems.jira.adf.model.MediaSingle;
 import com.tsystems.jira.adf.model.OrderedList;

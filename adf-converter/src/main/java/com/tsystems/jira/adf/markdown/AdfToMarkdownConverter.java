@@ -8,8 +8,8 @@ import java.util.Objects;
 import java.util.Optional;
 import java.util.function.Consumer;
 
-import com.tsystems.jira.adf.api.ConverterContext;
 import com.tsystems.jira.adf.api.ConversionException;
+import com.tsystems.jira.adf.api.ConverterContext;
 import com.tsystems.jira.adf.api.OutboundConverter;
 import com.tsystems.jira.adf.config.ConverterConfig;
 import com.tsystems.jira.adf.model.AdfNode;
@@ -19,23 +19,18 @@ import com.tsystems.jira.adf.model.DecisionItem;
 import com.tsystems.jira.adf.model.DecisionList;
 import com.tsystems.jira.adf.model.Document;
 import com.tsystems.jira.adf.model.Emoji;
-import com.tsystems.jira.adf.model.HardBreak;
-import com.tsystems.jira.adf.model.Heading;
 import com.tsystems.jira.adf.model.Mark;
-import com.tsystems.jira.adf.model.Panel;
-import com.tsystems.jira.adf.model.Paragraph;
-import com.tsystems.jira.adf.model.Status;
-import com.tsystems.jira.adf.model.Table;
-import com.tsystems.jira.adf.model.TableCell;
-import com.tsystems.jira.adf.model.TableHeader;
-import com.tsystems.jira.adf.model.TableRow;
-import com.tsystems.jira.adf.model.TaskItem;
-import com.tsystems.jira.adf.model.TaskList;
-import com.tsystems.jira.adf.model.Text;
 import com.tsystems.jira.adf.model.Media;
 import com.tsystems.jira.adf.model.MediaGroup;
 import com.tsystems.jira.adf.model.MediaInline;
 import com.tsystems.jira.adf.model.MediaSingle;
+import com.tsystems.jira.adf.model.Panel;
+import com.tsystems.jira.adf.model.Status;
+import com.tsystems.jira.adf.model.Table;
+import com.tsystems.jira.adf.model.TableHeader;
+import com.tsystems.jira.adf.model.TaskItem;
+import com.tsystems.jira.adf.model.TaskList;
+import com.tsystems.jira.adf.model.Text;
 import com.tsystems.jira.adf.util.MediaUtil;
 import com.tsystems.jira.adf.util.TableUtil;
 
@@ -47,7 +42,9 @@ public class AdfToMarkdownConverter implements OutboundConverter<String> {
     private final ConverterConfig config;
 
     public AdfToMarkdownConverter(ConverterConfig config) {
-        this.config = Optional.ofNullable(config).orElse(ConverterConfig.builder().build());
+        this.config = Optional
+        		.ofNullable(config)
+        		.orElse( ConverterConfig.builder().build() );
     }
 
     @Override
@@ -144,7 +141,7 @@ public class AdfToMarkdownConverter implements OutboundConverter<String> {
                 }
                 sb.append("\n```").append("\n\n");
             }
-            case "hardBreak" -> sb.append("  \n");
+            case "hardBreak" -> sb.append("---  \n");
             case "text" -> renderText((Text) node, sb, state, ctx);
             case "panel" -> renderPanel((Panel) node, sb, state, ctx);
             case "status" -> renderStatus((Status) node, sb);

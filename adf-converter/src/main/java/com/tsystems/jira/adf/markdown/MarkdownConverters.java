@@ -19,5 +19,6 @@ public final class MarkdownConverters {
     public static InboundConverter<String> inbound(ConverterConfig config) {
         return new MarkdownToAdfConverter(config);
     }
+    
 }
 
